@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    margin:unset;
+}
+
+header img {
+    display: block;
+    width: 60px;
+}
+
+span {
+    font-weight: bold;
+}
+
+
+.d-flex {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.grid-col {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem;
+}
+
+.asgn-counter {
+    grid-column: 1 / span 12;
+    padding: 1rem;
+}
+
+.calculator-table {
+    grid-column: span 12;
+    padding: 1rem;
+}
+
+.results {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    background-color: #f19c1f;
+    border-radius: 20px;
+    padding: 1rem;
+    -webkit-box-shadow: 3px 6px 23px -9px #000000; 
+    box-shadow: 3px 6px 23px -9px #000000;
+
+}
+
+
+
+@media screen and (min-width:760px) {
+    .asgn-counter {
+        grid-column: 1 / span 6;
+    }
+
+    .results {
+        grid-column: 7 / span 6;
+        grid-row: 1;
+        height: unset;
+    }
+    
+}
+
+.calculator-table input[type=number] {
+    background-image: url(../img/percent-icon.svg);
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+}
+
+
+/* removes arrows from inputs */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
